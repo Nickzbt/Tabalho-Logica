@@ -1,0 +1,14 @@
+nome,utilizacoes,sintaxe,salario,paradigma,seguranca,velocidade
+Java,"BD, App Desktop,IA,Android",Dificil,75,"POO, estruturada, imperativa, generica, funcional, reflexiva, concorrente",Alta,Baixa
+Java Script,Web,Facil,83,POO,Baixa,Media
+C,"BD, Embarcado",Medio,92,"estruturada, imperativa, procedural",N/A,Alta
+C++,"BD, Jogos, App Desktop",Medio,70,"POO, estruturada, imperativa, procedural",N/A,Alta
+Assembly,Embarcado,Dificil,120,imperativa,N/A,Media
+Ruby,"Web, App Desktop",Facil,78,POO,Alta,Baixa
+Swift,MAC/IOS,Facil,105,"POO, estruturada, imperativa, funcional, concorrente",N/A,Media
+PHP,Web,Facil,65,"POO, procedural, reflexiva",Baixa,Baixa
+C#,Jogos,Medio,68,POO,N/A,Alta
+R,"Machine Learning, Estatistica, Big Data",Facil,82,"POO, sequencializacao, imperativo, dinamico, processual, reciproco",N/A,Baixa
+Rust,DS,Dificil,115,"POO, imperativa, funcional",N/A,Alta
+GO,Web,Facil,117,"concorrente, imperativa, estruturada",N/A,Alta
+Python,"IA, Image processing",Facil,79,"POO, imperativa, funcional",Baixa,Baixa
