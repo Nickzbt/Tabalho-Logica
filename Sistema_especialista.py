@@ -6,8 +6,6 @@ from sets import dificuldade, paradigma, seguranca, utilizacoes, velocidade
 # lista para armezenar dicionarios referentes a cada uma das linguagens
 linguagens = []
 
-salario: int = 0
-
 dict_escolha: dict = {
     "nome": None,
     "utilizacoes": None,
@@ -18,11 +16,23 @@ dict_escolha: dict = {
     "velocidade": None
 }
 
-def print_options(option: list[str]):
+
+def print_options(options: list[str]):
     count = 0
-    for i in option:
+    for i in options:
         print('(', count, ')', i)
         count += 1
+
+
+def get_choice(options: list[str]) -> str:
+    choice = None
+    while choice == None:
+        choice = int(input("escolha uma das opcoes acima: "))
+        if choice >= len(options) or choice < 0:
+            print("opa! escolha", choice, "nao e uma das opcoes...")
+            choice = None
+    return options[choice]
+
 
 with open('data.csv', mode='r') as infile:
     reader = csv.DictReader(infile)
@@ -40,28 +50,23 @@ with open('data.csv', mode='r') as infile:
 
 print("selecione uma utilizacao (digite o numero)")
 print_options(utilizacoes)
-choice = int(input("escolha uma das opcoes acima: "))
-dict_escolha["utilizacoes"] = utilizacoes[choice]
+dict_escolha["utilizacoes"] = get_choice(utilizacoes)
 
 print("selecione uma dificuldade (digite o numero)")
 print_options(dificuldade)
-choice = int(input("escolha uma das opcoes acima: "))
-dict_escolha["dificuldade"] = dificuldade[choice]
+dict_escolha["dificuldade"] = get_choice(dificuldade)
 
 print("selecione um paradigma (digite o numero)")
 print_options(paradigma)
-choice = int(input("escolha uma das opcoes acima: "))
-dict_escolha["paradigma"] = paradigma[choice]
+dict_escolha["paradigma"] = get_choice(paradigma)
 
 print("selecione um nivel de seguranca (digite o numero)")
 print_options(seguranca)
-choice = int(input("escolha uma das opcoes acima: "))
-dict_escolha["seguranca"] = seguranca[choice]
+dict_escolha["seguranca"] = get_choice(seguranca)
 
 print("selecione uma velocidade de compilacao (digite o numero)")
 print_options(velocidade)
-choice = int(input("escolha uma das opcoes acima: "))
-dict_escolha["velocidade"] = velocidade[choice]
+dict_escolha["velocidade"] = get_choice(velocidade)
 
 salario = int(input("insira uma faixa salarial (valor por ano): "))
 dict_escolha["salario"] = salario
